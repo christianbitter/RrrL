@@ -1,0 +1,12 @@
+Package: Rrrl
+Title: Reinforcement Learning Experiments in R
+Version: 0.1
+Authors@R: person("Christian", "Bitter", email = "Christian.Bitter@gmail.com",
+                  role = c("aut", "cre"))
+Description: A set of functions and examples that will solidify learning of content provided 
+            in the book Reinforcement Learning: An Introduction
+Depends: R (>= 3.1.0)
+RoxygenNote: 6.1.1
+License: What license is it under?
+LazyData: true
+dependsOn: R6, dplyr, ggplot2, gridExtra, ggthemes, testthat
