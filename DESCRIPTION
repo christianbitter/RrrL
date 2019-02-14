@@ -9,4 +9,7 @@ Depends: R (>= 3.1.0)
 RoxygenNote: 6.1.1
 License: What license is it under?
 LazyData: true
-dependsOn: R6, dplyr, ggplot2, gridExtra, ggthemes, testthat
+Imports: R6
+dependsOn:  R6, dplyr, ggplot2,  gridExtra,  ggthemes, uuid
+Suggests: 
+    testthat

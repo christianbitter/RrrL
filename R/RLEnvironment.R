@@ -6,7 +6,8 @@ RLEnvironment <- R6::R6Class("RLEnvironment",
                              ),
                              private = list(
                                .state_space = NULL,
-                               .action_space = NULL
+                               .action_space = NULL,
+                               .id = uuid::UUIDgenerate()
                              ),
                              active = list(
                                state_space = function(value) {
