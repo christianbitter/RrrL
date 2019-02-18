@@ -1,7 +1,10 @@
 #'@export
 RLAgent <- R6::R6Class("RLAgent",
+                       inherit = RLObject,
                        public = list(
-                         initialize = function(name){
+                         initialize = function(name) {
+                           super$initialize()
+                           
                            if (!missing(name) && !is.null(name)) {
                              private$.name <- name;
                            }
@@ -11,7 +14,6 @@ RLAgent <- R6::R6Class("RLAgent",
                          }
                        ),
                        private = list(
-                         .id = uuid::UUIDgenerate(),
                          .name = NULL
                        ),
                        active = list(
@@ -20,13 +22,6 @@ RLAgent <- R6::R6Class("RLAgent",
                              private$.name
                            } else {
                              stop("`$name` cannot be assigned", call. = FALSE)
-                           }
-                         },
-                         id = function(value) {
-                           if (missing(value)) {
-                             private$.id
-                           } else {
-                             stop("`$id` cannot be assigned", call. = FALSE)
                            }
                          }
                        )

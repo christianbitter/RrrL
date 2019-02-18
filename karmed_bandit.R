@@ -155,6 +155,7 @@ e_greedy_selection <- function(rl_env, action_space, tmax, ...){
 }
 
 nBandits <- 6;
+s_space <- Rrrl::KArmedBanditStateSpaceDescriptor(k = nBandits);
 action_space <- 1:nBandits;
 rl_env <- bandit(k = nBandits);
 TMAX   <- 1e3;
